@@ -1,5 +1,4 @@
 import React from 'react'
-import Bit from '../../images/Vector.svg'
 export default function Featured() {
   return (
     <div className='lg:mt-40 flex flex-col justify-between h-28 mb-24'>
@@ -8,7 +7,7 @@ export default function Featured() {
             {
             ["","","",""].map((com, i)=>(
             <div className="flex lg:justify-between  col-span-1" key={i}>
-                <img src={Bit} alt="" className=' w-12 h-12 mr-4' />
+                <img src={require('../../images/Vector.png')} alt="" className=' w-12 h-12 mr-4' />
                 <p className="font-sspro font-semibold text-2xl h-12 flex items-center text-gray-500"> Bitcoin</p>
             </div>
             ))

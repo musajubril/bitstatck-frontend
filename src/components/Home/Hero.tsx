@@ -1,5 +1,4 @@
 import React from 'react'
-import SVG from "../../images/hero.svg"
 export default function Hero() {
   return (
     <div className='flex lg:flex-row flex-col justify-between items-center mt-32 lg:mt-56'>
@@ -25,7 +24,7 @@ export default function Hero() {
             <img src={require('../../images/Burst-circle-1.png')} />
         </div>
         <div className="lg:w-5/12">
-            <img src={SVG} className="h-96 lg:h-auto" />
+            <img src={require('../../images/Group 18.png')} className="h-96 lg:h-auto" />
         </div>
     </div>
   )
