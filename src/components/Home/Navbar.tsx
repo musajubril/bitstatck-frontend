@@ -46,12 +46,12 @@ export default function Navbar() {
             <img src={require('../../images/bitstack-logo.png')} alt="" className='object-center h-20' />
         </div>
     <div className="flex flex-col justify-center items-center">
-            <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${open ? "hidden" : "block"}`} onClick={handleOpen}> open </button>
+            {/* <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${open ? "hidden" : "block"}`} onClick={handleOpen}> open </button> */}
         </div>
     </div>
     <div className={`top-0 absolute bg-white h-48 px-2 pt-5 transition-all duration-700 shadow w-11/12 mx-auto  ${!open ? "hidden" : "block"}`}>
         <div className="flex flex-row-reverse">
-            <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${!open ? "hidden" : "block"}`} onClick={handleClose}> Close </button>
+            {/* <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${!open ? "hidden" : "block"}`} onClick={handleClose}> Close </button> */}
         </div>
 
     </div>
