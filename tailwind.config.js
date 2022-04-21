@@ -431,6 +431,7 @@ module.exports = {
       '5/6': '83.333333%',
       full: '100%',
       screen: '100vh',
+      m_h: "813px"
     }),
     inset: (theme, { negative }) => ({
       auto: 'auto',
@@ -795,6 +796,8 @@ module.exports = {
       screen: '100vw',
       min: 'min-content',
       max: 'max-content',
+      m_w: "813px",
+      m_f: "436px",
     }),
     zIndex: {
       auto: 'auto',

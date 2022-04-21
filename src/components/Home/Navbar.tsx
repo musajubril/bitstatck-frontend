@@ -1,15 +1,18 @@
 import React from 'react'
+// import Login from "./Login"
 // import Logo from '../../images/bitstack-logo.png'
 
-export default function Navbar() {
-    const [open, setOpen] = React.useState(false)
-    const handleOpen = () => {
-        setOpen(true)
-    }
-    const handleClose = () => {
-        setOpen(false)
-    }
+export default function Navbar({form, setForm, open, setOpen}) {
+    // const [open, setOpen] = React.useState(false)
+    // const handleOpen = () => {
+    //     setOpen(true)
+    // }
+    // const handleClose = () => {
+    //     setOpen(false)
+    // }
   return (
+      <>
+      {/* <Login /> */}
       <div className='w-full bg-white fixed top-0'>
     <div className='justify-between h-24 items-center hidden lg:flex lg:container mx-auto w-full px-6'>
         <div className="flex flex-col justify-center items-center">
@@ -34,10 +37,21 @@ export default function Navbar() {
         </div>
         <div className="flex justify-evenly items-center">
             <div className="cursor-pointer">
-            <div className="text-left text-white bg-yellow-500 py-2 w-24 mr-1 rounded-tl-md rounded-bl-md font-inter font-bold transform transition-all hover:scale-105 duration-700 pl-3">Login</div>
+            <div className="text-left text-white bg-yellow-500 py-2 w-24 mr-1 rounded-tl-md rounded-bl-md font-inter font-bold transform transition-all hover:scale-105 duration-700 pl-3"
+            onClick={()=>{
+                setForm("Login")
+                setOpen(true)
+            }}
+            >Login</div>
             </div>
             <div className="cursor-pointer">
-            <div className="text-left text-white bg-yellow-500 py-2 w-24 pl-3 rounded-tr-md rounded-br-md font-inter font-bold transform transition-all hover:scale-105 duration-700">Signup</div>
+            <div className="text-left text-white bg-yellow-500 py-2 w-24 pl-3 rounded-tr-md rounded-br-md font-inter font-bold transform transition-all hover:scale-105 duration-700"
+            
+            onClick={()=>{
+                setForm("Create Account")
+                setOpen(true)
+            }}
+            >Signup</div>
             </div>
         </div>
     </div>
@@ -49,12 +63,7 @@ export default function Navbar() {
             {/* <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${open ? "hidden" : "block"}`} onClick={handleOpen}> open </button> */}
         </div>
     </div>
-    <div className={`top-0 absolute bg-white h-48 px-2 pt-5 transition-all duration-700 shadow w-11/12 mx-auto  ${!open ? "hidden" : "block"}`}>
-        <div className="flex flex-row-reverse">
-            {/* <button className={`object-center border border-yellow-500 rounded px-6 py-2 ${!open ? "hidden" : "block"}`} onClick={handleClose}> Close </button> */}
-        </div>
-
-    </div>
       </div>
+      </>
   )
 }
