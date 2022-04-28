@@ -1,6 +1,7 @@
 import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "components/Home/";
+import User from "components/User";
 function App() {
   return (
     <>
@@ -9,6 +10,7 @@ function App() {
         render={({location}) => (
             <Switch location={location} key={location.pathname}>
               <Route exact path="/" component={Home} />
+              <Route exact path="/user" component={User} />
             </Switch>
         )}
          />

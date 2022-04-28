@@ -72,7 +72,7 @@ export default function Auth({form, setForm, open, setOpen}) {
       }
     },
     onError(){
-      alert("registration failed")
+      alert("login failed")
     }
   })
   const handleCreateAccount = (e: any) => {

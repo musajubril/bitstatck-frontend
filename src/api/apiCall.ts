@@ -37,6 +37,7 @@ export const registration = async ({ url, data }: { url: string, data: any }) =>
 
 export const login = async ({ url, data }: { url: string, data: any }) => {
   const response = await axios.post(url, data)
-  localStorage.setItem('bitstack_token', response.data.access)
+  // console.log(response.data)
+  localStorage.setItem('bitstack_token', response.data.data)
   return response.data
 }
