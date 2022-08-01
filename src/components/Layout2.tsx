@@ -17,14 +17,15 @@ import {
   TrendingUpIcon
 } from "@heroicons/react/outline";
 import jwtDecode from "jwt-decode";
+import { NavLink, useHistory } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: CogIcon, current: true },
-  { name: "Fixed Savings", href: "/fixed-savings", icon: CashIcon, current: false },
-  { name: "Flexible Savings", href: "/flexible-savings", icon: CashIcon, current: false },
-  { name: "Wallet", href: "/wallet", icon: FolderOpenIcon, current: false },
-  { name: "History", href: "/history", icon: TrendingUpIcon, current: false },
-  { name: "Profile", href: "/profile", icon: UserAddIcon, current: false },
+  { name: "Dashboard", href: "/", icon: CogIcon },
+  { name: "Fixed Savings", href: "/fixed-savings", icon: CashIcon },
+  { name: "Flexible Savings", href: "/flexible-savings", icon: CashIcon },
+  { name: "Wallet", href: "/wallet", icon: FolderOpenIcon },
+  { name: "History", href: "/history", icon: TrendingUpIcon },
+  { name: "Profile", href: "/profile", icon: UserAddIcon },
 ];
 
 function classNames(...classes) {
@@ -35,6 +36,9 @@ export default function Layout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const bitstack_token = localStorage?.bitstack_token
   const user: {email: any, phone_number: any} = jwtDecode(bitstack_token)
+  const history = useHistory()
+  console.log(navigation.filter(nav=>nav.href===history.location.pathname))
+  const page = navigation.filter(nav=>nav.href===history.location.pathname)[0].name
   return (
     <div className="h-screen flex overflow-hidden bg-white">
       <Transition.Root show={sidebarOpen} as={Fragment}>
@@ -93,19 +97,20 @@ export default function Layout({ children }) {
                     alt="Workflow"
                   />
                 </div>
-                <nav className="mt-5 px-2 space-y-1">
+                <nav className="mt-5 px-2 space-y-1 text-gray-600">
                   {navigation.map((item) => (
-                    <a
+                    <NavLink
                       key={item.name}
-                      href={item.href}
-                      className={"text-gray-600 hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"}
+                      to={item.href}
+                      activeClassName="text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md"
+                      className={" hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"}
                     >
                       <item.icon
-                        className={"text-gray-400 group-hover:text-white mr-4 h-6 w-6"}
+                        className={"group-hover:text-white mr-4 h-6 w-6"}
                         aria-hidden="true"
                       />
                       {item.name}
-                    </a>
+                    </NavLink>
                   ))}
                 </nav>
               </div>
@@ -153,21 +158,22 @@ export default function Layout({ children }) {
               </div>
               <nav className="mt-5 flex-1 px-2 bg-white space-y-1">
                 {navigation.map((item) => (
-                  <a
+                  <NavLink
                     key={item.name}
-                    href={item.href}
+                    to={item.href}
+                    activeClassName="text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md"
                     className={
                       "text-gray-600 hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     }
                   >
                     <item.icon
                       className={
-                        "text-gray-400 group-hover:text-white mr-3 h-6 w-6"
+                        "group-hover:text-white mr-3 h-6 w-6"
                       }
                       aria-hidden="true"
                     />
                     {item.name}
-                  </a>
+                  </NavLink>
                 ))}
               </nav>
             </div>
@@ -209,7 +215,7 @@ export default function Layout({ children }) {
           <div className="py-6">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
               <h1 className="text-2xl font-semibold text-gray-900">
-                Dashboard
+                {page}
               </h1>
             </div>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
