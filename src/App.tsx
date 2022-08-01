@@ -2,9 +2,11 @@ import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "components/Home/";
 import User from "components/User";
+import { Notifications } from 'react-push-notification';
 function App() {
   return (
     <>
+    <Notifications />
     <BrowserRouter>
         <Route
         render={({location}) => (

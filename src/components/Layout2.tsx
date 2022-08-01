@@ -3,23 +3,28 @@ import { Fragment, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import {
   CalendarIcon,
+  CashIcon,
   ChartBarIcon,
+  CogIcon,
   FolderIcon,
+  FolderOpenIcon,
   HomeIcon,
   InboxIcon,
   MenuIcon,
+  UserAddIcon,
   UsersIcon,
   XIcon,
+  TrendingUpIcon
 } from "@heroicons/react/outline";
 import jwtDecode from "jwt-decode";
 
 const navigation = [
-  { name: "Dashboard", href: "#", icon: HomeIcon, current: true },
-  { name: "Team", href: "#", icon: UsersIcon, current: false },
-  { name: "Projects", href: "#", icon: FolderIcon, current: false },
-  { name: "Calendar", href: "#", icon: CalendarIcon, current: false },
-  { name: "Documents", href: "#", icon: InboxIcon, current: false },
-  { name: "Reports", href: "#", icon: ChartBarIcon, current: false },
+  { name: "Dashboard", href: "/", icon: CogIcon, current: true },
+  { name: "Fixed Savings", href: "/fixed-savings", icon: CashIcon, current: false },
+  { name: "Flexible Savings", href: "/flexible-savings", icon: CashIcon, current: false },
+  { name: "Wallet", href: "/wallet", icon: FolderOpenIcon, current: false },
+  { name: "History", href: "/history", icon: TrendingUpIcon, current: false },
+  { name: "Profile", href: "/profile", icon: UserAddIcon, current: false },
 ];
 
 function classNames(...classes) {
