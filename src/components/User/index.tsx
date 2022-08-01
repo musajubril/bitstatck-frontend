@@ -5,6 +5,7 @@ import React from 'react'
 import moment from 'moment'
 import { useQuery } from 'react-query'
 import Layout from 'components/Layout2'
+import addNotification from 'react-push-notification';
 
 export default function User() {
     const {data} = useQuery(
@@ -20,6 +21,15 @@ export default function User() {
         // localStorage.setItem("user", JSON.stringify(data?.data))
     },[data?.data])
     console.log(user)
+    const buttonClick = () => {
+        addNotification({
+            title: 'Warning',
+            subtitle: 'This is a subtitle',
+            message: 'This is a very long message',
+            theme: 'darkblue',
+            native: true // when using native, your OS will handle theming.
+        });
+    };
   return (
     <Layout>
     <div className="h-screen w-full flex flex-col items-center justify-center">
@@ -29,6 +39,9 @@ export default function User() {
         <div className="text-center text-5xl font-bold text-blue-900">
             Welcome User
         </div>
+        <button onClick={buttonClick} className="border-yellow-500 px-6 py-2 border-2">
+           Hello world.
+          </button>
         <div className="text-center">
             <p>{user?.email}</p>
             <p>{user?.phone_number}</p>

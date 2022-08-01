@@ -14,7 +14,7 @@ export default function Navbar({form, setForm, open, setOpen}) {
       <>
       {/* <Login /> */}
       <div className='w-full bg-white fixed top-0'>
-    <div className='justify-between h-24 items-center hidden lg:flex lg:container mx-auto w-full px-6'>
+    <div className='justify-between h-24 items-center lg:flex lg:container mx-auto w-full px-6'>
         <div className="flex flex-col justify-center items-center">
             <img src={require('../../images/bitstack-logo.png')} alt="" className='object-center h-20' />
         </div>
