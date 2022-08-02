@@ -17,7 +17,7 @@ import {
   TrendingUpIcon
 } from "@heroicons/react/outline";
 import jwtDecode from "jwt-decode";
-import { NavLink, useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const navigation = [
   { name: "Dashboard", href: "/", icon: CogIcon },
@@ -99,18 +99,17 @@ export default function Layout({ children }) {
                 </div>
                 <nav className="mt-5 px-2 space-y-1 text-gray-600">
                   {navigation.map((item) => (
-                    <NavLink
+                    <Link
                       key={item.name}
                       to={item.href}
-                      activeClassName="text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                      className={" hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"}
+                      className={ page===item.name ? "text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md" : " hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-base font-medium rounded-md"}
                     >
                       <item.icon
                         className={"group-hover:text-white mr-4 h-6 w-6"}
                         aria-hidden="true"
                       />
                       {item.name}
-                    </NavLink>
+                    </Link>
                   ))}
                 </nav>
               </div>
@@ -156,13 +155,12 @@ export default function Layout({ children }) {
                   alt="Workflow"
                 />
               </div>
-              <nav className="mt-5 flex-1 px-2 bg-white space-y-1">
+              <nav className="mt-5 flex-1 px-2 bg-white space-y-1 flex flex-col">
                 {navigation.map((item) => (
-                  <NavLink
+                  <Link
                     key={item.name}
                     to={item.href}
-                    activeClassName="text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md"
-                    className={
+                    className={ page===item.name ? "text-gray-50 bg-yellow-500 group flex items-center px-2 py-2 text-base font-medium rounded-md mb-5" :
                       "text-gray-600 hover:bg-yellow-500 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md"
                     }
                   >
@@ -173,7 +171,7 @@ export default function Layout({ children }) {
                       aria-hidden="true"
                     />
                     {item.name}
-                  </NavLink>
+                  </Link>
                 ))}
               </nav>
             </div>

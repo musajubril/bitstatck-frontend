@@ -14,7 +14,7 @@ export default function Home() {
     <Navbar form={form} setForm={setForm} open={open} setOpen={setOpen} />
     <Auth  form={form} setForm={setForm} open={open} setOpen={setOpen} />
     <div className='lg:container mx-auto w-full px-6 lg:h-screen'>
-    <Hero />
+    <Hero setForm={setForm} setOpen={setOpen} />
     <Featured />
     </div>
     <Features />

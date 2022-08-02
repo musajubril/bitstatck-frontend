@@ -17,7 +17,7 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
 
   return (
     <form onSubmit={handleSubmit}>
-          <div className="w-m_f">
+          <div className="md:w-full md:w-m_f w-full">
             <div className="text-gray-700 font-bold text-2xl">
               Create Account
             </div>
@@ -45,7 +45,7 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
                 type="email"
                 id="email"
                 name="email"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="md:w-full md:w-m_f w-full h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="hayor.jose@gmail.com"
               />
             </div>
@@ -67,7 +67,7 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
               id="phone_number"
               onChange={handleChange}
                 type="number"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="2347064748874"
               />
             </div>
@@ -86,7 +86,7 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
               id="password"
               onChange={handleChange}
                 type="password"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="*************"
               />
             </div>
@@ -105,10 +105,10 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
                 type="password"
                 name="confirm_password"
                 id="confirm_password"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="*************"
               />
-              <div className={`text-red-700 text-sm mt-1 font-bold w-m_f bg-red-100 p-2 rounded ${confirmPasswordError ? "block" : "hidden"}`}>Passwords do not match</div>
+              <div className={`text-red-700 text-sm mt-1 font-bold w-full md:w-m_f bg-red-100 p-2 rounded ${confirmPasswordError ? "block" : "hidden"}`}>Passwords do not match</div>
             </div>
           </div>
           <div className="flex flex-col mb-7">
@@ -124,12 +124,12 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
               id="referral_code"
               onChange={handleChange}
                 type="text"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="brodah_ayo"
               />
             </div>
           </div>
-          <div className="flex w-m_f">
+          <div className="flex w-full md:w-m_f">
           <input className="w-1/2 mr-1 h-9 rounded mt-1 bg-yellow-500 text-white flex items-center justify-center text-lg font-semibold cursor-pointer transform transition-all duration-500 hover:text-yellow-500 hover:bg-white border-yellow-500 border-2 hover:scale-105" type="submit" value="Sign Up" />
             {/* Sign Up */}
           {/* </inp> */}

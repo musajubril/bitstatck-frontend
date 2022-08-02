@@ -8,7 +8,7 @@ export default function Features() {
         backgroundSize: "cover",
         // height: "100vh"
     }}>
-        <div className="flex w-full">
+        <div className="hidden md:flex w-full">
             <div className="flex flex-col mr-48">
                 <div className=" mb-8">
                     <img src={require('../../images/bitstack-logo.png')} alt="" className='h-36 w-28' />

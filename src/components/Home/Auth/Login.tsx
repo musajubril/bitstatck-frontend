@@ -18,7 +18,7 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
 
   return (
     <form onSubmit={handleSubmit}>
-          <div className="w-m_f">
+          <div className="w-full md:w-m_f">
             <div className="text-gray-700 font-bold text-2xl">
               Sign In
             </div>
@@ -29,7 +29,7 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
           {
             loginType==="email" ?
             <>
-            <div className="mt-12 flex flex-row-reverse text-yellow-500 w-m_f text-xs font-medium cursor-pointer" onClick={()=>setLoginType("phone_number")}>
+            <div className="mt-12 flex flex-row-reverse text-yellow-500 w-full md:w-m_f text-xs font-medium cursor-pointer" onClick={()=>setLoginType("phone_number")}>
               Use Phone Number Instead
           </div>
           <div className="flex flex-col mb-7">
@@ -51,7 +51,7 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
                 type="email"
                 name="email"
                 id="email"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="hayor.jose@gmail.com"
                 />
             </div>
@@ -59,7 +59,7 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
                 </>
           :
           <>
-          <div className="mt-12 flex flex-row-reverse text-yellow-500 w-m_f text-xs font-medium cursor-pointer" onClick={()=>setLoginType("email")}>
+          <div className="mt-12 flex flex-row-reverse text-yellow-500 w-full md:w-m_f text-xs font-medium cursor-pointer" onClick={()=>setLoginType("email")}>
               Use Email Instead
           </div>
           <div className="flex flex-col mb-7">
@@ -78,7 +78,7 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
               name="phone_number"
               id="phone_number"
                 type="number"
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="+2347064748874"
               />
             </div>
@@ -98,12 +98,12 @@ export default function Login({form, setForm, open, setOpen, handleChange, handl
               id="password"
               onChange={handleChange}
                 type={passwordType}
-                className="w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
+                className="w-full md:w-m_f h-9 border border-gray-300 text-sm pl-3 font-normal rounded mt-1"
                 placeholder="*************"
               />
             </div>
           </div>
-          <div className="flex w-m_f">
+          <div className="flex w-full md:w-m_f">
           <input className="w-1/2 mr-1 h-9 rounded mt-1 bg-yellow-500 text-white flex items-center justify-center text-lg font-semibold cursor-pointer transform transition-all duration-500 hover:text-yellow-500 hover:bg-white border-yellow-500 border-2 hover:scale-105" value="Sign In" type="submit" />
             {/* Sign In
           </input> */}

@@ -6,15 +6,15 @@ import { Notifications } from 'react-push-notification';
 import History from "components/History";
 function App() {
   return (
-    <>
+    <div className='bg-gray-50'>
     <Notifications />
     <BrowserRouter>
         <Route
         render={({location}) => (
             <Switch location={location} key={location.pathname}>
-              <Route exact path="/" component={Home} />
               <Route exact path="/user" component={User} />
               <Route exact path="/history" component={History} />
+              <Route exact path="/" component={Home} />
             </Switch>
         )}
          />
@@ -23,7 +23,7 @@ function App() {
       {/* <Router>
           <Route component={Home} exact href="/" />
       </Router> */}
-    </>
+    </div>
   );
 }
 
