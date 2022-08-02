@@ -21,3 +21,7 @@
     height: 508.59px;
     border-radius: 101.922px;
 }
+.shadow-yellow {
+    --tw-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px #f59e0b;
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}

@@ -7,7 +7,7 @@ import CreateAccount from "./CreateAccount";
 import Login from "./Login";
 import { useMutation, useQuery } from 'react-query';
 import { registration, postRequest, login, getRequest } from '../../../api/apiCall';
-import { SIGN_IN, SIGN_UP } from "api/apiUrl";
+import { SIGN_IN, SIGN_UP, URL } from "api/apiUrl";
 
 export default function Auth({form, setForm, open, setOpen}) {
   // const {data} = useQuery(
@@ -73,6 +73,7 @@ export default function Auth({form, setForm, open, setOpen}) {
     },
     onError(){
       alert("login failed")
+      // alert(URL)
     }
   })
   const handleCreateAccount = (e: any) => {

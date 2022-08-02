@@ -16,7 +16,7 @@ export default function CreateAccount({form, setForm, open, setOpen, handleChang
   const [PasswordEye, setPasswordEye] = React.useState<any>(EyeIcon);
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className=''>
           <div className="md:w-full md:w-m_f w-full">
             <div className="text-gray-700 font-bold text-2xl">
               Create Account

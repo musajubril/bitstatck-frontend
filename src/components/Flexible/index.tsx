@@ -2,7 +2,7 @@ import { CashIcon, FolderIcon, FolderRemoveIcon } from "@heroicons/react/outline
 import Layout from "components/Layout2";
 import React from "react";
 
-export default function History() {
+export default function Flexible() {
   const stats = [
     {title:"Amount Saved", val:"999999", icon: FolderIcon, img: require("../../images/undraw_treasure_of9i.png")},
     {title:"Withdrawals", val:"999999", icon: FolderRemoveIcon, img: require('../../images/undraw_Wallet_re_cx9u.png')},
