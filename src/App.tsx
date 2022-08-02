@@ -5,6 +5,8 @@ import User from "components/User";
 import { Notifications } from 'react-push-notification';
 import History from "components/History";
 import ErrorPage from "components/404";
+import Fixed from "components/Fixed";
+import Flexible from "components/Flexible";
 function App() {
   return (
     <div className='bg-gray-50'>
@@ -15,6 +17,9 @@ function App() {
             <Switch location={location} key={location.pathname}>
               <Route exact path="/user" component={User} />
               <Route exact path="/history" component={History} />
+              <Route exact path="/fixed-savings" component={Fixed} />
+              <Route exact path="/flexible-savings" component={Flexible} />
+              {/* <Route exact path="/history" component={History} /> */}
               <Route exact path="/" component={Home} />
               <Route exact path="*" component={ErrorPage} />
             </Switch>
