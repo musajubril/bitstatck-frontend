@@ -20,11 +20,11 @@ import jwtDecode from "jwt-decode";
 import { Link, useHistory } from "react-router-dom";
 
 const navigation = [
-  { name: "Dashboard", href: "/", icon: CogIcon },
+  { name: "Dashboard", href: "/user", icon: CogIcon },
   { name: "Fixed Savings", href: "/fixed-savings", icon: CashIcon },
   { name: "Flexible Savings", href: "/flexible-savings", icon: CashIcon },
   { name: "Wallet", href: "/wallet", icon: FolderOpenIcon },
-  { name: "History", href: "/history", icon: TrendingUpIcon },
+  // { name: "History", href: "/history", icon: TrendingUpIcon },
   { name: "Profile", href: "/profile", icon: UserAddIcon },
 ];
 
