@@ -68,7 +68,7 @@ export default function Auth({form, setForm, open, setOpen}) {
       }
       if(data?.message.type==="success") {
         alert(data?.message.msg)
-        window.location.href = "/user"
+        window.location.href = "/history"
       }
     },
     onError(){
