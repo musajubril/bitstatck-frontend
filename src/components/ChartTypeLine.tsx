@@ -1,4 +1,3 @@
-import "./styles.css";
 import React from "react";
 import {
   LineChart,
@@ -7,7 +6,8 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  Legend,
+  ResponsiveContainer
 } from "recharts";
 
 const data = [
@@ -57,9 +57,10 @@ const data = [
 
 export default function ChartTypeLine() {
   return (
+    <ResponsiveContainer>
     <LineChart
-      width={500}
-      height={300}
+      // width={500}
+      // height={400}
       data={data}
       margin={{
         top: 5,
@@ -78,8 +79,9 @@ export default function ChartTypeLine() {
         dataKey="pv"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
-      />
+        />
       <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
     </LineChart>
+        </ResponsiveContainer>
   );
 }

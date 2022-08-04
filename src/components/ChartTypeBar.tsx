@@ -1,6 +1,5 @@
-import "./styles.css";
 import React from "react";
-import { BarChart, Bar } from "recharts";
+import { BarChart, Bar, ResponsiveContainer, Tooltip, Legend, XAxis, YAxis } from "recharts";
 
 const data = [
   {
@@ -49,8 +48,17 @@ const data = [
 
 export default function ChartTypeBar() {
   return (
-    <BarChart width={150} height={40} data={data}>
+    <ResponsiveContainer>
+    <BarChart 
+    // width={500}
+    // height={400}
+    data={data}>
       <Bar dataKey="uv" fill="#8884d8" />
+      <Tooltip/>
+      <Legend/>
+      <XAxis dataKey="name" />
+      <YAxis />
     </BarChart>
+       </ResponsiveContainer>
   );
 }

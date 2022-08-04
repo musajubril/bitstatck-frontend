@@ -1,6 +1,5 @@
-import "./styles.css";
 import React from "react";
-import { PieChart, Pie } from "recharts";
+import { PieChart, Pie, ResponsiveContainer, Tooltip, Legend } from "recharts";
 
 const data01 = [
   { name: "Group A", value: 400 },
@@ -21,28 +20,33 @@ const data02 = [
   { name: "D1", value: 150 },
   { name: "D2", value: 50 }
 ];
-{/* <ResponsiveContainer></ResponsiveContainer> */}
 export default function ChartTypePie() {
   return (
-    <PieChart width={400} height={400}>
+    <ResponsiveContainer>
+    <PieChart>
       <Pie
         data={data01}
         dataKey="value"
-        cx={200}
-        cy={200}
+        // cx={200}
+        // cy={200}
         outerRadius={60}
         fill="#8884d8"
       />
       <Pie
         data={data02}
         dataKey="value"
-        cx={200}
-        cy={200}
+        // cx={200}
+        // cy={200}
         innerRadius={70}
         outerRadius={90}
         fill="#82ca9d"
         label
-      />
+        />
+        <Tooltip />
+        {/* <Legend /> */}
     </PieChart>
+        </ResponsiveContainer>
   );
 }
+
+{/* <ResponsiveContainer></ResponsiveContainer> */}
