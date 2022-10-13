@@ -1,6 +1,6 @@
 // import "./App.css";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Home from "components/Home/";
+// import Home from "components/Home/";
 import User from "components/User";
 import History from "components/History";
 import ErrorPage from "components/404";
