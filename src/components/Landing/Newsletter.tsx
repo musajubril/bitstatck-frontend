@@ -27,6 +27,7 @@ export default function Newsletter() {
                   className="absolute inset-0 h-full w-full"
                   preserveAspectRatio="xMidYMid slice"
                   xmlns="http://www.w3.org/2000/svg"
+                  
                   fill="none"
                   viewBox="0 0 1463 360"
                 >
